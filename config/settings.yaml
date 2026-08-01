@@ -1,0 +1,46 @@
+project:
+  name: Agentic Clinical Document Investigation
+  version: 0.1.0
+  random_seed: 12345
+
+paths:
+  synthea_csv: data/raw/synthea_csv
+  synthea_fhir: data/raw/synthea_fhir
+  interim: data/interim
+  processed: data/processed
+  selected_patients: data/selected_patients
+  generated_documents: data/generated_documents
+  investigation_cases: data/investigation_cases
+  reports: outputs/reports
+  traces: outputs/traces
+
+selection:
+  target_total_patients: 30
+  target_multi_medication_patients: 15
+  target_abnormal_observation_patients: 15
+  target_discharge_encounters: 20
+
+  minimum_encounters: 2
+  minimum_medications: 3
+  minimum_observations: 5
+
+clinical:
+  abnormal_observation_keywords:
+    - abnormal
+    - high
+    - low
+    - critical
+
+  encounter_classes:
+    - inpatient
+    - emergency
+    - ambulatory
+
+retrieval:
+  top_k: 5
+  embedding_model: sentence-transformers/all-MiniLM-L6-v2
+
+investigation:
+  require_source_evidence: true
+  require_counterevidence_search: true
+  allow_treatment_recommendations: false

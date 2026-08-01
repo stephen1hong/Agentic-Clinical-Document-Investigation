@@ -1,0 +1,5 @@
+Metadata-Version: 2.4
+Name: agentic-clinical-document-investigation
+Version: 0.1.0
+Summary: Agentic clinical document investigation and reconciliation platform
+Requires-Python: <3.13,>=3.10
