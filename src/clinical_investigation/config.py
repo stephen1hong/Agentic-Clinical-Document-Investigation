@@ -34,14 +34,21 @@ class Settings(BaseSettings):
     selected_patients_dir: Path = PROJECT_ROOT / "data/selected_patients"
     generated_documents_dir: Path = PROJECT_ROOT / "data/generated_documents"
 
-    def data_paths(self) -> DataPaths:
-        return DataPaths(
-            synthea_csv=self.synthea_csv_dir,
-            synthea_fhir=self.synthea_fhir_dir,
-            processed=self.processed_data_dir,
-            selected_patients=self.selected_patients_dir,
-            generated_documents=self.generated_documents_dir,
-        )
+    @property
+    def patient_packages_dir(self) -> Path:
+        return self.processed_data_dir / "patients"
+
+    @property
+    def encounter_cases_dir(self) -> Path:
+        return self.processed_data_dir / "encounter_cases"
+
+    @property
+    def selected_encounters_dir(self) -> Path:
+        return PROJECT_ROOT / "data/selected_encounters"
+
+    @property
+    def encounter_documents_dir(self) -> Path:
+        return self.generated_documents_dir / "encounter_cases"
 
 
 settings = Settings()

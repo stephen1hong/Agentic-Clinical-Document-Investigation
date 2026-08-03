@@ -9,11 +9,17 @@ src/clinical_investigation/config.py
 src/clinical_investigation/agents/__init__.py
 src/clinical_investigation/evaluation/__init__.py
 src/clinical_investigation/evidence/__init__.py
+src/clinical_investigation/evidence/encounter_case.py
+src/clinical_investigation/evidence/encounter_validation.py
 src/clinical_investigation/extraction/__init__.py
 src/clinical_investigation/ingestion/__init__.py
+src/clinical_investigation/ingestion/package_validation.py
+src/clinical_investigation/ingestion/patient_package.py
 src/clinical_investigation/ingestion/synthea_csv.py
 src/clinical_investigation/reconciliation/__init__.py
 src/clinical_investigation/reporting/__init__.py
+src/clinical_investigation/reporting/clinical_documents.py
+src/clinical_investigation/reporting/document_validation.py
 src/clinical_investigation/retrieval/__init__.py
 src/clinical_investigation/schemas/__init__.py
 src/clinical_investigation/tools/__init__.py
