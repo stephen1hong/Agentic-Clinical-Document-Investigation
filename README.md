@@ -989,3 +989,15 @@ Key validated results include:
 - 25/25 CLI/API usability tests passed.
 
 For the full technical case study, architecture rationale, safety design, evaluation results, and curated demos, see [`PORTFOLIO.md`](PORTFOLIO.md).
+
+## Citation
+
+If you use or reference this specific software release, please cite:
+
+**Stephen Hong. _Agentic Clinical Document Investigation Platform_, v0.1.2. Zenodo. DOI: 10.5281/zenodo.22003745**
+
+For the latest version of the project, use the all-versions DOI:
+
+**10.5281/zenodo.22003744**
+
+Citation metadata is also available in [`CITATION.cff`](CITATION.cff).
