@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+message: "If you use or reference this software, please cite it using the metadata below."
+title: "Agentic Clinical Document Investigation Platform"
+type: software
+authors:
+  - family-names: "Hong"
+    given-names: "Stephen"
+version: "0.1.0"
+date-released: 2026-08-18
+repository-code: "https://github.com/stephen1hong/Agentic-Clinical-Document-Investigation"
+abstract: >
+  An evidence-grounded agentic AI platform for longitudinal clinical document
+  investigation with structured evidence, claims, findings, validation,
+  human-review escalation, provenance, and CLI/API interfaces.
