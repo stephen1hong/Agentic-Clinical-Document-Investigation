@@ -50,5 +50,49 @@ class Settings(BaseSettings):
     def encounter_documents_dir(self) -> Path:
         return self.generated_documents_dir / "encounter_cases"
 
+    @property
+    def investigation_cases_dir(self) -> Path:
+        return PROJECT_ROOT / "data" / "investigation_cases"
+
+    @property
+    def medication_mutation_evaluation_dir(
+        self,
+    ) -> Path:
+        """Root directory for mutation-based medication evaluation."""
+
+        return PROJECT_ROOT / "data" / "evaluation" / "medication_mutations"
+
+    @property
+    def medication_mutation_cases_dir(
+        self,
+    ) -> Path:
+        """Mutated investigation cases."""
+
+        return self.medication_mutation_evaluation_dir / "cases"
+
+    @property
+    def medication_mutation_gold_dir(
+        self,
+    ) -> Path:
+        """Gold mutation labels."""
+
+        return self.medication_mutation_evaluation_dir / "gold"
+
+    @property
+    def medication_mutation_predictions_dir(
+        self,
+    ) -> Path:
+        """Medication discrepancy predictions."""
+
+        return self.medication_mutation_evaluation_dir / "predictions"
+
+    @property
+    def medication_mutation_reports_dir(
+        self,
+    ) -> Path:
+        """Evaluation reports."""
+
+        return self.medication_mutation_evaluation_dir / "reports"
+
 
 settings = Settings()

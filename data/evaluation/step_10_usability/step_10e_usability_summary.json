@@ -1,0 +1,44 @@
+﻿{
+    "schema_version":  "1.0",
+    "step":  "10E",
+    "name":  "CLI and API Usability",
+    "status":  "PASS",
+    "cli":  {
+                "commands":  [
+                                 "investigate",
+                                 "list-cases",
+                                 "demo"
+                             ],
+                "success_exit_code":  0,
+                "runtime_error_exit_code":  1,
+                "argparse_error_exit_code":  2,
+                "json_contract_frozen":  true
+            },
+    "api":  {
+                "health_endpoint":  "GET /health",
+                "cases_endpoint":  "GET /cases",
+                "investigation_endpoint":  "POST /investigations/{case_id}",
+                "minimal_surface":  true
+            },
+    "application_boundary":  {
+                                 "shared_service":  "run_investigation(case_id)",
+                                 "direct_graph_access_from_cli":  false,
+                                 "direct_graph_access_from_api":  false,
+                                 "transport_independent_result":  true
+                             },
+    "validation":  {
+                       "cli_tests":  13,
+                       "api_tests":  5,
+                       "consistency_tests":  3,
+                       "application_runner_tests":  4,
+                       "total_tests":  25,
+                       "cli_api_consistency_verified":  true,
+                       "real_review_case_consistency_verified":  true,
+                       "pytest_basetemp":  ".pytest_tmp"
+                   },
+    "known_non_blocking_warnings":  [
+                                        "LangChainPendingDeprecationWarning",
+                                        "StarletteDeprecationWarning"
+                                    ],
+    "step_10e_complete":  true
+}

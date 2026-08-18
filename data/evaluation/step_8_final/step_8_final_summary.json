@@ -1,0 +1,160 @@
+{
+  "schema_version": "1.0",
+  "evaluation_step": "simplified_8F",
+  "evaluation_name": "Final Simplified Step 8 Freeze",
+  "overall_status": "PASS",
+  "frozen_at": "2026-08-16T20:35:09.863478+00:00",
+  "step_results": {
+    "8A": {
+      "name": "Evaluation framework and baseline",
+      "status": "COMPLETE",
+      "frozen_artifact_count": 4
+    },
+    "8B": {
+      "name": "Finding quality and evidence grounding",
+      "status": "PASS"
+    },
+    "8C": {
+      "name": "Timeline and medication validation",
+      "status": "PASS",
+      "components": {
+        "8C.1": {
+          "name": "Timeline validation",
+          "status": "PASS"
+        },
+        "8C.2": {
+          "name": "Medication validation",
+          "status": "PASS"
+        }
+      }
+    },
+    "8D": {
+      "name": "Human-review burden and report quality",
+      "status": "PASS"
+    },
+    "8E": {
+      "name": "Consolidated error analysis and refinement",
+      "status": "PASS"
+    },
+    "8F": {
+      "name": "Final Step-8 freeze",
+      "status": "PASS"
+    }
+  },
+  "final_population": {
+    "cases": 20,
+    "findings": 317,
+    "review_required_findings": 1,
+    "contextual_findings": 316,
+    "medication_mentions": 1697,
+    "medication_profiles": 176,
+    "medication_discrepancies": 1
+  },
+  "final_quality_metrics": {
+    "medication_detection": {
+      "true_positives": 1,
+      "false_positives": 0,
+      "false_negatives": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    "human_review": {
+      "cases_requiring_review": 1,
+      "case_review_rate_percentage": 5.0,
+      "finding_review_rate_percentage": 0.31545741324921134,
+      "max_review_findings_per_case": 1
+    },
+    "refinement": {
+      "historical_errors_registered": 4,
+      "resolved_errors": 4,
+      "unresolved_errors": 0,
+      "new_production_change_required": false,
+      "fresh_validation_required": false
+    }
+  },
+  "release_gate": {
+    "step_8_complete": true,
+    "ready_for_step_9": true,
+    "next_step": "Step 9 — End-to-End Acceptance Testing"
+  },
+  "missing_artifacts": [],
+  "non_pass_steps": [],
+  "frozen_artifacts": {
+    "8A_baseline": [
+      {
+        "name": "finding_sample_manifest",
+        "path": "data\\evaluation\\representative_sample\\finding_sample_manifest.json",
+        "size_bytes": 58365,
+        "sha256": "e288fb09f8df07a8c0cd0eaa920f4f96ed50d7299daab0434fbb5a447cc08a28",
+        "status": "COMPLETE"
+      },
+      {
+        "name": "finding_sample_annotations",
+        "path": "data\\evaluation\\representative_sample\\finding_sample_annotations.json",
+        "size_bytes": 68120,
+        "sha256": "305a8ac7ab0e0e23df0182973330852942aba03d9f008dc3633f2b206f238142",
+        "status": "COMPLETE"
+      },
+      {
+        "name": "finding_sample_metrics",
+        "path": "data\\evaluation\\representative_sample\\finding_sample_metrics.json",
+        "size_bytes": 3503,
+        "sha256": "faafceadc154afd5958eb608593ea1ac4482c3e4470648c45fb1ab2d267155ce",
+        "status": "COMPLETE"
+      },
+      {
+        "name": "false_positive_analysis",
+        "path": "data\\evaluation\\representative_sample\\false_positive_analysis.json",
+        "size_bytes": 9084,
+        "sha256": "875a1bdc4866886c9027c28307d9d6615479fc16e23678c977580cd3050845fc",
+        "status": "COMPLETE"
+      }
+    ],
+    "8B_through_8E": [
+      {
+        "name": "8B Finding quality and evidence grounding",
+        "path": "data\\evaluation\\step_8c_final\\step_8c_final_summary.json",
+        "size_bytes": 248274,
+        "sha256": "ca917facb58344fcb199692f6abf4bbf3c6e36513fbfae1922ec6d4da4ddf994",
+        "status": "PASS"
+      },
+      {
+        "name": "8C.1 Timeline validation",
+        "path": "data\\evaluation\\step_8d_final\\step_8d_final_summary.json",
+        "size_bytes": 6957,
+        "sha256": "62d3712d62e1adcef8b96b9b25567a0aa14360d19e7efa8a8e04d1a8c2d88dd4",
+        "status": "PASS"
+      },
+      {
+        "name": "8C.2 Medication validation",
+        "path": "data\\evaluation\\step_8c2_final\\step_8c2_medication_validation_summary.json",
+        "size_bytes": 2549,
+        "sha256": "e518745c3fd455830c0b89a707801ed7644143e2a7d00c8fe2565154acfb09f2",
+        "status": "PASS"
+      },
+      {
+        "name": "8D Human-review burden and report quality",
+        "path": "data\\evaluation\\step_8d_final\\step_8d_review_quality_summary.json",
+        "size_bytes": 2615,
+        "sha256": "61e3167b699aac867e72af7d20586b149eca61bb55121a98d605ea1d49c6cea9",
+        "status": "PASS"
+      },
+      {
+        "name": "8E Consolidated error analysis and refinement",
+        "path": "data\\evaluation\\step_8_refinement\\step_8_refinement_summary.json",
+        "size_bytes": 8115,
+        "sha256": "3f1e818895152ef42e0d52676176c17a0101e40bf15d2f006656179f0a78c02e",
+        "status": "PASS"
+      }
+    ]
+  },
+  "frozen_artifact_count": 9,
+  "methodological_notes": [
+    "Simplified Step 8A is frozen as the original representative baseline package rather than as a synthetic summary artifact created after the fact.",
+    "Legacy detailed Step 8C maps to simplified Step 8B.",
+    "Legacy detailed Step 8D timeline evaluation maps to simplified Step 8C.1.",
+    "Observed 100% values apply to the evaluated deterministic datasets and must not be interpreted as proof of universal clinical accuracy.",
+    "Step 8 evaluation is considered frozen after this artifact is created. Any later production-logic change requires rerunning the affected validation before release."
+  ]
+}

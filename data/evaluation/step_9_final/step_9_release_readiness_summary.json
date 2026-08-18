@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0",
+  "acceptance_step": "9D",
+  "acceptance_name": "Release-Readiness Freeze",
+  "status": "PASS",
+  "frozen_at": "2026-08-17T00:41:53.472856+00:00",
+  "release_gates": {
+    "9A": {
+      "status": "PASS",
+      "purpose": "Full end-to-end persisted-output regression"
+    },
+    "9B": {
+      "status": "PASS",
+      "purpose": "Robustness and failure-mode acceptance",
+      "ready_for_9c": true
+    },
+    "9C": {
+      "status": "PASS",
+      "purpose": "Final report and human-review acceptance",
+      "ready_for_9d": true
+    }
+  },
+  "release_population": {
+    "cases": 20,
+    "findings": 317,
+    "review_required_findings": 1,
+    "contextual_findings": 316,
+    "cases_requiring_review": 1
+  },
+  "robustness_coverage": {
+    "mutation_tests_9b1_to_9b4": 49,
+    "repeated_failure_runs": 10,
+    "successful_recoveries": 10
+  },
+  "release_acceptance": {
+    "all_release_gates_pass": true,
+    "step_9b_ready_for_9c": true,
+    "step_9c_ready_for_9d": true,
+    "final_report_integrity": true,
+    "human_review_projection_exact": true,
+    "human_review_routing_consistent": true,
+    "production_immutability_confirmed": true,
+    "zero_release_validation_issues": true
+  },
+  "validation_issue_count": 0,
+  "validation_issues": [],
+  "frozen_artifact_count": 3,
+  "frozen_artifacts": [
+    {
+      "step": "9A",
+      "path": "data\\evaluation\\step_9a\\end_to_end_regression.json",
+      "status": "PASS",
+      "sha256": "182b4822d00e8a8c8644a28c984ff8f121e2e17fcb38e3a3a44384e13fad3b53"
+    },
+    {
+      "step": "9B",
+      "path": "data\\evaluation\\step_9b_final\\step_9b_robustness_summary.json",
+      "status": "PASS",
+      "sha256": "fe1cc4e050fbe41e38947c9f91eb4bcc6a8049407fb2a8a2ce58f112cc555d61"
+    },
+    {
+      "step": "9C",
+      "path": "data\\evaluation\\step_9c\\final_report_human_review_acceptance.json",
+      "status": "PASS",
+      "sha256": "565e7277db08ff0b0fc07bcefd4c70c3f78514958a8282797010ee0ff33189a9"
+    }
+  ],
+  "step_9_complete": true,
+  "release_ready": true,
+  "methodological_notes": [
+    "Step 9D is a read-only release-readiness freeze.",
+    "It does not rerun production investigation workflows, regenerate reviewer artifacts, or intentionally modify investigation-case outputs.",
+    "Step 9A establishes the persisted-output regression baseline.",
+    "Step 9B establishes robustness against the tested missing-artifact, schema-invalid, provenance, timeline, medication, deterministic failure, and recovery scenarios.",
+    "Step 9C establishes release acceptance of final investigation reports and human-review projections.",
+    "SHA-256 hashes freeze the authoritative Step 9A, 9B, and 9C evaluation artifacts.",
+    "A PASS means the current tested release satisfies the defined Step 9 acceptance criteria.",
+    "It does not imply universal clinical correctness, exhaustive failure-mode coverage, or external regulatory validation."
+  ]
+}

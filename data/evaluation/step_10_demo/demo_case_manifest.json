@@ -1,0 +1,35 @@
+{
+    "schema_version": "1.0",
+    "status": "frozen",
+    "purpose": "Curated demonstration cases for Step 10 packaging and portfolio demonstrations.",
+    "demo_cases": [
+        {
+            "demo_id": "demo_a",
+            "title": "Typical Successful Investigation",
+            "case_id": "2b36a3c6-e9d6-554e-28c3-a8244a67a553__2b36a3c6-e9d6-554e-cc63-a167ac5cab80",
+            "finding_count": 13,
+            "review_status": "not_required",
+            "requires_human_review": false,
+            "selection_rationale": "Representative successful investigation with a moderate finding count and evidence-grounded temporal findings. Suitable for the default live CLI demonstration."
+        },
+        {
+            "demo_id": "demo_b",
+            "title": "Evidence-Rich Temporal Reconstruction",
+            "case_id": "86919c2e-6fcc-4756-2a76-c0e31e732109__86919c2e-6fcc-4756-d733-973edb1caccd",
+            "finding_count": 15,
+            "review_status": "not_required",
+            "requires_human_review": false,
+            "selection_rationale": "Evidence-rich case with substantial evidence, clinical-claim, timeline, and medication artifacts consolidated into 15 temporal uncertainty findings without requiring human review."
+        },
+        {
+            "demo_id": "demo_c",
+            "title": "Human-Review Medication Discrepancy",
+            "case_id": "b23188ac-9529-2450-e0b7-58adb2b38de6__b23188ac-9529-2450-612b-f5fa70a4d52d",
+            "finding_count": 19,
+            "review_status": "pending",
+            "requires_human_review": true,
+            "review_finding_count": 1,
+            "selection_rationale": "Safety-oriented demonstration case containing a high-severity lisinopril dose conflict that triggers human review while preserving the machine-generated investigation report."
+        }
+    ]
+}

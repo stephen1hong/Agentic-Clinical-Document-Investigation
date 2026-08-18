@@ -4,10 +4,34 @@ __pycache__/
 *.pyd
 *.so
 .pytest_cache/
+.pytest_tmp/
 .mypy_cache/
 .ruff_cache/
 .coverage
 htmlcov/
+
+# Local temporary/test directories
+.pytest_tmp/
+.tmp/
+tmp/
+
+# Packaging artifacts
+build/
+dist/
+*.egg-info/
+
+# Keep only frozen/public evaluation artifacts
+data/evaluation/*
+!data/evaluation/step_8_final/
+!data/evaluation/step_8_final/**
+!data/evaluation/step_9_final/
+!data/evaluation/step_9_final/**
+!data/evaluation/step_10_demo/
+!data/evaluation/step_10_demo/**
+!data/evaluation/step_10_usability/
+!data/evaluation/step_10_usability/**
+!data/evaluation/step_10_final/
+!data/evaluation/step_10_final/**
 
 # Virtual environment
 .venv/
@@ -15,7 +39,8 @@ venv/
 
 # Environment variables
 .env
-.env.local
+.env.*
+!.env.example
 
 # IDE
 .vscode/
@@ -28,28 +53,37 @@ venv/
 logs/*
 outputs/*
 !logs/.gitkeep
+!outputs/reports/
 !outputs/reports/.gitkeep
+!outputs/traces/
 !outputs/traces/.gitkeep
 
-# Raw and processed datasets
-data/raw/*
+# Raw datasets - keep directory structure only
+data/raw/**
+
+!data/raw/synthea_csv/
+data/raw/synthea_csv/**
+!data/raw/synthea_csv/.gitkeep
+
+!data/raw/synthea_fhir/
+data/raw/synthea_fhir/**
+!data/raw/synthea_fhir/.gitkeep
+
+# Processed/generated datasets
 data/interim/*
 data/processed/*
 data/selected_patients/*
+data/selected_encounters/*
 data/generated_documents/*
 data/investigation_cases/*
-data/evaluation/predictions/*
 
 # Preserve empty directories
-!data/raw/synthea_csv/.gitkeep
-!data/raw/synthea_fhir/.gitkeep
 !data/interim/.gitkeep
 !data/processed/.gitkeep
 !data/selected_patients/.gitkeep
+!data/selected_encounters/.gitkeep
 !data/generated_documents/.gitkeep
 !data/investigation_cases/.gitkeep
-!data/evaluation/gold/.gitkeep
-!data/evaluation/predictions/.gitkeep
 
 # OS
 .DS_Store

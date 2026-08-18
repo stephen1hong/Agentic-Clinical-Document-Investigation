@@ -1,0 +1,41 @@
+﻿{
+    "schema_version":  "1.0",
+    "step":  "10D",
+    "name":  "Curated Demonstration Cases",
+    "status":  "PASS",
+    "demo_count":  3,
+    "demos":  [
+                  {
+                      "demo_id":  "demo_a",
+                      "title":  "Typical Successful Investigation",
+                      "finding_count":  13,
+                      "validation_error_count":  0,
+                      "review_status":  "not_required",
+                      "requires_human_review":  false
+                  },
+                  {
+                      "demo_id":  "demo_b",
+                      "title":  "Evidence-Rich Temporal Reconstruction",
+                      "finding_count":  15,
+                      "validation_error_count":  0,
+                      "review_status":  "not_required",
+                      "requires_human_review":  false
+                  },
+                  {
+                      "demo_id":  "demo_c",
+                      "title":  "Human-Review Medication Discrepancy",
+                      "finding_count":  19,
+                      "validation_error_count":  0,
+                      "review_status":  "pending",
+                      "requires_human_review":  true
+                  }
+              ],
+    "unit_tests_passed":  6,
+    "manifest_frozen":  true,
+    "case_and_report_paths_verified":  true,
+    "documentation_complete":  true,
+    "documentation_contract_verified":  true,
+    "encoding_clean":  true,
+    "runtime_demo_commands_validated":  true,
+    "step_10d_complete":  true
+}
